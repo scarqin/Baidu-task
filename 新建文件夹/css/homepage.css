@@ -1,0 +1,40 @@
+html{
+    margin:0;
+    padding: 0;
+}
+.main{
+    margin:20px;
+    padding: 20px;
+     /*overflow: auto;*/
+        background-color: #eee;
+}
+.main div{
+    padding: 20px;
+    background-color: #fff;
+}
+.team-inf-name{ 
+        float: left;
+    width: 158px;
+    border: 1px solid #999;
+}
+.team-name{
+    margin-left: 20px;
+    vertical-align: top;
+}
+.team-inf-main{
+    margin-left: 220px;
+    margin-right: 180px;
+
+}
+.team-inf-mate{
+    float:right;
+width: 80px;
+}
+#teammate{
+   padding-bottom: 0px;
+}
+.team-inf-mate img{
+ display: block;
+ width: 80px;
+ margin-bottom: 20px;
+}
