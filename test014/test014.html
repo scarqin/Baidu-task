@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+  <style type="text/css">
+  body{
+    padding: 0;
+    margin:0;
+    font-family:  Microsoft YaHei;
+      }
+  .btn{
+  display: inline-block;
+  margin-right: 15px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  }
+  .btn-asc{
+  background-color:#FB9D9D;
+  }
+  .btn-des{
+  background-color: #000;
+  }
+  #aqi-list{
+  padding: 0;
+  }
+  #aqi-list li{
+  width: 215px;
+  padding:5px 15px;
+  height:20px;
+  line-height: 20px;
+  text-align: center;
+  background-color:rgb(143, 217, 236);
+  color: #fff;
+  list-style-type: none;
+  </style>
+  <body>
+    <h3>污染城市列表</h3>
+    <ul id="aqi-list">
+      <!--
+      <li>第一名：福州（样例），10</li>
+      <li>第二名：福州（样例），10</li> -->
+    </ul>
+    <div class="btn-asc btn">最优排行</div>
+    <div class="btn-des btn">最差排行</div>
+    <script type="text/javascript">
+    var aqiData = [
+    ["北京", 90],
+    ["上海", 50],
+    ["福州", 10],
+    ["广州", 50],
+    ["成都", 90],
+    ["西安", 100]
+    ];
+    (function () {
+    var list=document.querySelector('#aqi-list');
+    var BtnAsc=document.querySelector(".btn-asc");
+    var BtnDes=document.querySelector(".btn-des");
+    BtnAsc.onclick=asc;
+    BtnDes.onclick=des;
+    function asc(){
+    aqiData.sort(function(a,b){
+    return b[1]-a[1];
+    });//从小到大
+    var List='';
+    for (var i = aqiData.length - 1; i >= 0; i--) {
+    List+="<li>" +aqiData[i]+"</li>";
+    }
+    list.innerHTML=List;
+    }
+    function   des(){
+    aqiData.sort(function(a,b){
+    return a[1]-b[1];
+    });//从大到小
+    var List='';
+    for (var i = aqiData.length - 1; i >= 0; i--) {
+    List+="<li>" +aqiData[i]+"</li>";
+    }
+    list.innerHTML=List;
+    }
+    })();
+    </script>
+  </body>
+</html>
