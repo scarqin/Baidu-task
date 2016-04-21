@@ -106,7 +106,7 @@ function renderChart() {
   var colorsArr=getRandomArr();
   var j = 0;
   for (var i in chartData) {
-    str += '<span class="span-' + pageState.nowGraTime + '"' + 'style="height:' + chartData[i] + 'px; background-color:' + colors[colorsArr[j++]] + ';">' + '</span>';
+    str += '<span class="span-' + pageState.nowGraTime + '" title=" AQI:'+chartData[i]+'" ' + 'style="height:' + chartData[i] + 'px; background-color:' + colors[colorsArr[j++]] + ';">' + '</span>';
     if (j == 15) {
       j = 0;
     }
