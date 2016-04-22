@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>礼物</title>
+	</head>
+	<style type="text/css">
+	body{
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		font-family: "Microsoft YaHei"
+	}
+		.box{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -100px 0 0 -100px;
+			width: 200px;
+			height: 200px;
+		}
+		.click-box{
+			background-color: #FF9898;
+			color:#FFF;
+			font-weight: bold;
+			text-align: center;
+			line-height: 200px;
+		}
+		.wrap{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+	        background-color: rgba(0,0,0,0.45);
+	        z-index: 2;
+		}
+		.pop-up-box{
+			background-color: #e5e5e5;
+		}
+		.hidden{
+			display:none;
+		}
+	    .me{
+		width: 200px;
+	}
+	</style>
+	<body>
+		<div class="click-box box">
+			点击我会有惊喜~
+		</div>
+		<div class="wrap hidden">
+			<div class="pop-up-box box">
+				<img src="img/scar.jpg" class="me">
+			</div>
+		</div>
+		<script type="text/javascript" src="test037.js"></script>
+	</body>
+</html>
