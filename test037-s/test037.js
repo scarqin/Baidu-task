@@ -24,11 +24,6 @@ wrap.onclick = function() {
 	addClass(this, 'hidden');
 
 }
-
-function allowDrop(ev) {
-	ev.preventDefault();
-}
-
 function Startdrag(target) {
 	var params = {
 		left:0,
