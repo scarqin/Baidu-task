@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>礼物</title>
+		<title>程序猿</title>
 	</head>
 	<style type="text/css">
 	body{
@@ -17,6 +17,7 @@
 			margin: -100px 0 0 -100px;
 			width: 200px;
 			height: 200px;
+			background-color: #fff;
 		}
 		.click-box{
 			background-color: #FF9898;
@@ -25,31 +26,39 @@
 			text-align: center;
 			line-height: 200px;
 		}
-		.wrap{
-			position: absolute;
+		.mask{
+			position:fixed;
+			left: 0;
+			top: 0;
 			width: 100%;
 			height: 100%;
-	        background-color: rgba(0,0,0,0.45);
-	        z-index: 2;
+			background-color: rgba(0,0,0,0.45);
+			z-index: 9998;
 		}
 		.pop-up-box{
-			background-color: #e5e5e5;
+			z-index:9999;
 		}
 		.hidden{
 			display:none;
+		
 		}
-	    .me{
-		width: 200px;
+		.me{
+			position: absolute;
+			cursor: move;
+		    margin-left: 5px;
+		    margin-top:5px;
+			width: 190px;
+			
 	}
 	</style>
 	<body>
 		<div class="click-box box">
-			点我~
+			点我~点击黑色幕布关闭
 		</div>
-		<div class="wrap hidden">
-			<div class="pop-up-box box">
-				<img src="img/scar.jpg" class="me">
-			</div>
+		<div class="mask hidden">
+		</div>
+		<div class="pop-up-box box hidden">
+				<img src="img/scar.jpg" class="me"  draggable="true">
 		</div>
 		<script type="text/javascript" src="test037.js"></script>
 	</body>
